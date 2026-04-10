@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-foreground font-sans antialiased min-h-screen selection:bg-primary selection:text-white;
+    /* Subtle radial gradient background for modern feel */
+    background-image: radial-gradient(circle at top right, rgba(168, 85, 247, 0.15), transparent 40%),
+                      radial-gradient(circle at bottom left, rgba(168, 85, 247, 0.1), transparent 40%);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card border border-card-border backdrop-blur-md rounded-2xl shadow-xl;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 bg-primary text-primary-foreground font-medium rounded-lg shadow-lg hover:bg-purple-600 focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background transition-all active:scale-95 disabled:opacity-50;
+  }
+
+  .input-field {
+    @apply w-full bg-zinc-900/50 border border-zinc-800 text-white placeholder-zinc-500 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all;
+  }
+}
