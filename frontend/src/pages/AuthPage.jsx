@@ -108,7 +108,7 @@ const AuthPage = () => {
                   value={formData.password}
                   onChange={handleChange}
                   className="input-field pr-11"
-                  placeholder="••••••••"
+                  placeholder="enter password"
                 />
                 <button
                   type="button"
